@@ -18,7 +18,7 @@ def index(request):
 
 class PostListView(ListView):
     model = Post
-    template_name = 'awward/index.html'
+    template_name = 'index.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
 

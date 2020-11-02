@@ -130,13 +130,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'  
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-OGIN_REDIRECT_URL = 'index'
-
-LOGOUT_REDIRECT_URL = 'index'
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
-}
+LOGIN_REDIRECT_URL = 'awward-home'
+LOGIN_URL = 'login'
