@@ -45,9 +45,10 @@ INSTALLED_APPS = [
 ]
 
 UPLOADCARE = {
-    'pub_key': '2b709bca64245dd9e55e',
-    'secret': '0a60851de5f3db2dc728',
+    'pub_key': 'cdf1070950d4127373ea',
+    'secret': 'af601162e2db909c1d11',
 }
+
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -90,8 +91,8 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST':os.environ.get('DB_HOST'),
-        'PORT':os.environ.get('DB_POST')
+        'HOST':os.environ.get('DB_HOST', '127.0.0.1'),
+        'PORT':os.environ.get('DB_PORT',5432)
     
     }
 }
@@ -144,5 +145,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'  
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'awward-home'
-LOGIN_URL = 'login'
+OGIN_REDIRECT_URL = 'index'
+
+LOGOUT_REDIRECT_URL = 'index'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
+}
