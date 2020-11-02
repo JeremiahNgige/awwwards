@@ -49,8 +49,6 @@ UPLOADCARE = {
     'secret': '0a60851de5f3db2dc728',
 }
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
