@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'awwwwards',
     'crispy_forms',
-    'rest_framework',
     'users.apps.UsersConfig',
 ]
 
