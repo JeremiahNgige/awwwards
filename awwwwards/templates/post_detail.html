@@ -1,0 +1,32 @@
+{% extends 'awward/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content%}
+<div class="container">
+    <div class="sign-up-content">
+        <div class="row">
+            <div class="col-md-12 pb-5">
+                <img src="{{ object.image.url }}" alt="" class="img-responsive" width="100%">
+            </div>
+            <div class="col-md-10">
+                <h6 class="article-title">{{ object.title }} </h6>
+                <p>Posted by ~  <a class="mr-2" href="#">{{ object.author }}</a></p>
+                <p>{{ object.description }}</p>
+            </div>
+            <div class="col-md-2">
+                <a href="{{ post.image_url }}" class="btn btn-sm btn-info">visit site</a>
+            </div>
+            <hr>
+            <div class="col-md-10 pt-3">
+                <img class="rounded-circle article-img" width="30" height="30" src="{{ object.author.profile.image.url }}" alt="">{{ object.author }}
+            </div>
+            <div class="col-md-2 pt-3">
+                <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <div class="col-md-12 pt-3">
+                <h2 class="text-center">Ratings Scores</h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
