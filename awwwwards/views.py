@@ -14,11 +14,11 @@ def index(request):
         print(random_post)
     except:
         posts = None
-    return render(request, 'index.html', locals())
+    return render(request, 'awwwwards/index.html', locals())
 
 class PostListView(ListView):
     model = Post
-    template_name = 'index.html'
+    template_name = 'awwwwards/index.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
 

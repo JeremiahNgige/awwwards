@@ -1,6 +1,7 @@
 
 from pathlib import Path
 import os 
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,3 +132,9 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'awward-home'
 LOGIN_URL = 'login'
+
+cloudinary.config(
+    cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),  
+    api_key = os.environ.get('CLOUDINARY_API_KEY'),  
+    api_secret = os.environ.get('CLOUDINARY_API_SECRET')  
+)
