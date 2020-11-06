@@ -2,11 +2,11 @@
 
     Author: Ngige Brian
 
-#### Description
+## Description
 
 This project allows users to post their projects for other users to rate according to design, usability and content
 
-#### User Story
+### User Story
 
 * A user can view posted projects and their details.
 * A user can post a project to be rated/reviewed.
@@ -21,7 +21,7 @@ This project allows users to post their projects for other users to rate accordi
   * <https://github.com/JeremiahNgige/awwwards.git>
 
 * Navigate into the folder and install requirements
-  * cd awwards pip install -r requirements.txt 
+  * cd awwards pip install -r requirements.txt
 
 * Install and activate Virtual
   * python3 -m venv virtual - source virtual/bin/activate  
