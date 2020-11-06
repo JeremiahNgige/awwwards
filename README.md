@@ -48,10 +48,6 @@ This project allows users to post their projects for other users to rate accordi
 
 The project did not work completely properly as expected
 
-#### Contact Information
-
-If you have any question or contributions, please email me at alexotieno900@gmail.com
-
 #### License
 
 * licensed under the [MIT license](LICENSE)
